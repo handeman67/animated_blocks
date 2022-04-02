@@ -1,0 +1,249 @@
+:root {
+	--top-color: rgba(255, 166, 0, 0.938);
+	--bottom-color: rgba(70, 95, 87, 0.9);
+	--main-color: rgba(34, 46, 42, 0.9);
+	--my-gradiant: linear-gradient(var(--main-color), var(--bottom-color));
+	--main-font: "Aparajita", sans-serif;
+	--vH: 100vh;
+	--nxt: url("/temp/img/shine.png");
+	--logo: url("https://loremflickr.com/g/500/100/door ,random/all");
+	--bksection: url("https://loremflickr.com/g/500/500/house ,barn/all");
+  }
+  html {
+	box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+	box-sizing: inherit;
+  }
+  body {
+	font-size: 25px;
+	--one: 125deg;
+	--two: 245deg;
+	--color: rgb(224, 152, 17);
+	--tm: 0;
+	--y: 1.2rem;
+	--bkg: repeating-linear-gradient(
+		var(--one),
+		rgba(255, 255, 255, 0) 0,
+		rgba(255, 255, 255, 0) 49px,
+		rgba(10, 10, 10, 0.2) 50px,
+		rgba(255, 255, 255, 0) 51px
+	  ),
+	  repeating-linear-gradient(
+		var(--two),
+		rgba(255, 255, 255, 0) 0,
+		rgba(255, 255, 255, 0) 49px,
+		rgba(0, 0, 0, 0.1) 50px,
+		rgba(255, 255, 255, 0) 51px
+	  );
+	display: grid;
+	place-content: center;
+	overflow: hidden;
+	perspective: 1500px;
+	transform-style: preserve-3d;
+	box-sizing: border-box;
+	height: 98vh;
+	transition: All 2s ease-out;
+	background: #0008;
+  }
+  body:hover {
+	animation: roll 1ms ease-in forwards;
+  }
+  a:link {
+	color: wheat;
+  }
+  li input:checked {
+	background: var(--color);
+	transform: scale(0.5rem);
+	box-shadow: inset 1px 1px 2px 0px #000;
+	background: rgb(180, 151, 20);
+  }
+  nav {
+	position: absolute;
+	top: 0rem;
+	left: 0;
+	right: 0;
+	display: grid;
+	width: 100%;
+  }
+  nav ul li {
+	display: grid;
+	place-content: center;
+	background: var(--color);
+	border: 1px solid #0000;
+	border-radius: 50%;
+	box-shadow: 1px 1px 2px 0px #000;
+  }
+  [checked] {
+	background: var(--color);
+  }
+  nav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	width: 100%;
+	justify-content: space-around;
+	border: 1px solid rgb(112, 98, 98);
+  }
+  
+  input[type="radio"] {
+	appearance: none;
+	background-color: rgb(216, 188, 129);
+	align-content: center;
+	margin: 0;
+	font: inherit;
+	color: rgb(224, 152, 17);
+	width: 1rem;
+	height: 1rem;
+	border: 0.15em solid currentColor;
+	border-radius: 50%;
+	/* transform: translateY(-0.3em); */
+	box-shadow: 0px 0px 2px 0px #000;
+  }
+  label {
+	display: grid;
+	place-content: center;
+	width: 100%;
+	height: 100%;
+  
+	border: 0.15em solid var(--color);
+	border-radius: 50%;
+  }
+  .wrap {
+	
+	 animation: spin 2s linear alternate infinite;
+	
+  }
+  .mainWrap {
+	position: absolute;
+	top: 4rem;
+	left: 10vw;
+	right: 10vw;
+	bottom: 0;
+	display: flex;
+	flex-direction: row;
+	min-width: 200px;
+	min-height: 400px;
+	place-content: center;
+	background: var(--bkg), #f9f2;
+	transition: All 2s ease-out;
+	transform-origin: center;
+	transform-style: preserve-3d;
+	transform: rotatex(60deg) translate(0%, 0%) rotate3d(0, 0, 1, 0deg)
+	  translate3d(0, 0, 100px);
+  }
+  
+  .wrap {
+	display: grid;
+	place-content: center;
+	z-index: 10;
+	position: relative;
+	transform-origin: bottom;
+	/* backface-visibility: visible; */
+	transform-style: preserve-3d;
+	
+  }
+  div {
+	border: 1px solid #000;
+	padding: 1rem;
+  }
+  .side {
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+	transform: translate(-50%, -50%);
+	transform-origin: center;
+	opacity: 1;
+	/* border:5px solid #000; */
+  }
+  #front {
+	padding: 0;
+  }
+  #back {
+	padding: 0;
+  }
+  #left {
+	padding: 0;
+  }
+  #right {
+	padding: 0;
+  }
+  #bottom {
+	padding: 0;
+  }
+  #top {
+	padding: 0;
+  }
+  @keyframes roll {
+	to {
+	  --one: 30deg;
+	  --two: -33deg;
+	}
+  }
+  body {
+	--thisa: -90deg;
+	--thisb: 1.2rem;
+	--thisc: -90deg;
+	--thisd: 40deg;
+  }
+  @keyframes spin {
+	0% {
+	    width: 8rem;
+	    height: 8rem;  
+		transform:rotate3d(0, 0, 1, 120deg)
+		rotatez(40deg)
+		rotatex(0deg)
+		rotatey(90deg)
+		translatex(0px)
+		translatey(0rem)
+		translatez(0px)
+		translate3d(0%,0px,0px)
+		scale(0.85);
+      
+	}
+
+	100%{
+	    width: 8rem;
+	    height: 8rem;  
+		transform:rotate3d(0, 0, 1, 120deg)
+		rotatez(40deg)
+		rotatex(0deg)
+		rotatey(90deg)
+		translatex(0px)
+		translatey(5rem)
+		translatez(0px)
+		translate3d(0%,0px,0px)
+		scale(1.25);
+      
+	}
+  }
+  #target2 {
+	display: flex;
+	bottom: 10px;
+	flex-direction: column;
+	max-height: 30vh;
+	color: #fff;
+	position: fixed;
+  
+	overflow-y: auto;
+  }
+  #target {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	position: absolute;
+	bottom: 1rem;
+	left: 20%;
+  }
+  footer{
+	  position:fixed;
+	  max-height:3rem;
+	  bottom:0;
+	  left:0;
+	  right:0;
+	  overflow:hidden;
+  }
